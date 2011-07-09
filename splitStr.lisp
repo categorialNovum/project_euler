@@ -1,0 +1,5 @@
+(defun split-string (str)
+	(loop for i = 0 then (1+ j)
+		as j = (position #\Space str :start i)
+		collect (subseq str i j)
+		while j))
